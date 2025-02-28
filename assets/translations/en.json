@@ -1,0 +1,18 @@
+{
+  "select_language": "Select Language",
+  "login": "Login",
+  "signup": "Sign Up",
+  "mobile_number": "Mobile Number",
+  "email": "Email",
+  "password": "Password",
+  "first_name": "First Name",
+  "last_name": "Last Name",
+  "farmer_address": "Farmer Address",
+  "customer_login": "Customer Login",
+  "farmer_login": "Farmer Login",
+  "select_role": "Select Role",
+  "welcome": "Welcome",
+  "logout": "Logout",
+  "register": "Register",
+  "pick_image": "Pick Profile Image"
+}

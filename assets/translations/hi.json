@@ -1,0 +1,18 @@
+{
+  "select_language": "भाषा चुनें",
+  "login": "लॉगिन करें",
+  "signup": "साइन अप करें",
+  "mobile_number": "मोबाइल नंबर",
+  "email": "ईमेल",
+  "password": "पासवर्ड",
+  "first_name": "पहला नाम",
+  "last_name": "अंतिम नाम",
+  "farmer_address": "किसान का पता",
+  "customer_login": "ग्राहक लॉगिन",
+  "farmer_login": "किसान लॉगिन",
+  "select_role": "भूमिका चुनें",
+  "welcome": "स्वागत है",
+  "logout": "लॉग आउट",
+  "register": "रजिस्टर करें",
+  "pick_image": "प्रोफ़ाइल छवि चुनें"
+}

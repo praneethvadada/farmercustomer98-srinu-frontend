@@ -1,0 +1,18 @@
+{
+  "select_language": "భాషను ఎంచుకోండి",
+  "login": "లాగిన్",
+  "signup": "సైన్ అప్",
+  "mobile_number": "మొబైల్ నంబర్",
+  "email": "ఇమెయిల్",
+  "password": "పాస్‌వర్డ్",
+  "first_name": "మొదటి పేరు",
+  "last_name": "చివరి పేరు",
+  "farmer_address": "రైతు చిరునామా",
+  "customer_login": "కస్టమర్ లాగిన్",
+  "farmer_login": "రైతు లాగిన్",
+  "select_role": "పాత్రను ఎంచుకోండి",
+  "welcome": "స్వాగతం",
+  "logout": "లాగౌట్",
+  "register": "నమోదు",
+  "pick_image": "ప్రొఫైల్ చిత్రం ఎంచుకోండి"
+}

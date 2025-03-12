@@ -35,6 +35,8 @@ class GraphPage extends StatelessWidget {
   }
 }
 
+
+
 class BarChartWidget extends StatelessWidget {
   final List<Map<String, dynamic>> data;
   BarChartWidget(this.data);

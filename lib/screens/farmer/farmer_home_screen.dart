@@ -21,7 +21,7 @@ class _FarmerHomeScreenState extends State<FarmerHomeScreen> {
     // Center(child: Text('Products - Add/Edit/Delete')),
     Center(child: ProductsScreen()),
     FarmerRequestsScreen(),
-    const Center(child: ProfilePage()),
+    Center(child: ProfileScreen()),
   ];
 
   void _onItemTapped(int index) {

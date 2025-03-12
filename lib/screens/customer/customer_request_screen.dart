@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+import 'agreement_history_screen.dart';
 import 'customer_responses_screen.dart';
 
 class CustomerRequestsScreen extends StatefulWidget {
@@ -127,7 +128,16 @@ class _CustomerRequestsScreenState extends State<CustomerRequestsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("My Requests")),
+      appBar: AppBar(
+          actions: [
+            IconButton(
+              icon: Icon(Icons.history),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => CustomerAgreementHistoryScreen()));
+              },
+            ),
+          ],
+          title: Text("My Requests")),
       body: isLoading
           ? Center(child: CircularProgressIndicator())
           : ListView.builder(

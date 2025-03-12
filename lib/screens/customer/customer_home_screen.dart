@@ -20,7 +20,7 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
     CustomerProductsScreen(),
     CartScreen(), // Ensure this class is defined properly
     CustomerRequestsScreen(),
-    Center(child: ProfilePage()),
+    Center(child: ProfileScreen()),
   ];
 
   void _onItemTapped(int index) {

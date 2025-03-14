@@ -72,6 +72,7 @@ class _CustomerLoginScreenState extends State<CustomerLoginScreen> {
     return WillPopScope(
       onWillPop: () async => false,  // Disable back button to prevent navigation back
       child: Scaffold(
+        resizeToAvoidBottomInset : false,
         appBar: AppBar(
             automaticallyImplyLeading: false,
             title: Text("customer_login".tr())),

@@ -22,41 +22,6 @@ class _SearchProductsScreenState extends State<SearchProductsScreen> {
     _fetchProducts();
   }
 
-  /// ✅ Fetch Products from API
-  // Future<void> _fetchProducts() async {
-  //   SharedPreferences prefs = await SharedPreferences.getInstance();
-  //   String? token = prefs.getString("token");
-  //
-  //   if (token == null || token.isEmpty) {
-  //     log("❌ No token found! User might not be authenticated.");
-  //     return;
-  //   }
-  //
-  //   log("🟢 Fetching products with token: $token");
-  //
-  //   try {
-  //     final response = await http.get(
-  //       Uri.parse("http://10.0.2.2:3000/api/products/all"),
-  //       headers: {"Authorization": "Bearer $token"},
-  //     );
-  //
-  //     log("🔍 Request URL: http://10.0.2.2:3000/api/products/all");
-  //     log("🔍 Response Status: ${response.statusCode}");
-  //     log("🔍 Response Body: ${response.body}");
-  //
-  //     if (response.statusCode == 200) {
-  //       setState(() {
-  //         allProducts = jsonDecode(response.body)["products"];
-  //         filteredProducts = allProducts;
-  //         isLoading = false;
-  //       });
-  //     } else {
-  //       log("❌ Error fetching products: ${response.statusCode} - ${response.body}");
-  //     }
-  //   } catch (e) {
-  //     log("❌ Exception fetching products: $e");
-  //   }
-  // }
 
   Future<void> _fetchProducts() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -94,25 +59,6 @@ class _SearchProductsScreenState extends State<SearchProductsScreen> {
       log("❌ Exception fetching products: $e");
     }
   }
-
-  /// ✅ Efficient Search Function
-  // void _searchProducts(String query) {
-  //   setState(() {
-  //     searchQuery = query.toLowerCase();
-  //     filteredProducts = allProducts.where((product) {
-  //       final name = product["name"].toLowerCase();
-  //       final description = product["description"].toLowerCase();
-  //       final category = product["category"].toLowerCase();
-  //       final price = product["price"].toString();
-  //
-  //       return name.contains(searchQuery) ||
-  //           description.contains(searchQuery) ||
-  //           category.contains(searchQuery) ||
-  //           price.contains(searchQuery);
-  //     }).toList();
-  //     _sortProducts();
-  //   });
-  // }
 
 
   void _searchProducts(String query) {
@@ -251,48 +197,6 @@ class _SearchProductsScreenState extends State<SearchProductsScreen> {
     );
   }
 }
-
-// /// ✅ **Product Details Screen**
-// class ProductDetailsScreen extends StatelessWidget {
-//   final Map<String, dynamic> product;
-//
-//   ProductDetailsScreen({required this.product});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(title: Text(product["name"])),
-//       body: Padding(
-//         padding: EdgeInsets.all(16.0),
-//         child: Column(
-//           crossAxisAlignment: CrossAxisAlignment.start,
-//           children: [
-//             Text("Name: ${product["name"]}", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-//             SizedBox(height: 10),
-//             Text("Price: ₹${product["price"]}", style: TextStyle(fontSize: 16)),
-//             SizedBox(height: 10),
-//             Text("Category: ${product["category"]}", style: TextStyle(fontSize: 16)),
-//             SizedBox(height: 10),
-//             Text("Description:", style: TextStyle(fontWeight: FontWeight.bold)),
-//             Text(product["description"]),
-//             SizedBox(height: 20),
-//             Center(
-//               child: ElevatedButton(
-//                 onPressed: () {
-//                   // Navigate back
-//                   Navigator.pop(context);
-//                 },
-//                 child: Text("Back to Search"),
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-
 
 class ProductDetailsScreen extends StatefulWidget {
   final Map<String, dynamic> product;
@@ -447,18 +351,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             ),
 
             SizedBox(height: 20),
-
-            // // Checkout Button
-            // Center(
-            //   child: ElevatedButton(
-            //     onPressed: cartQuantity > 0 ? () {} : null,
-            //     style: ElevatedButton.styleFrom(
-            //       padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-            //       textStyle: TextStyle(fontSize: 18),
-            //     ),
-            //     child: Text("Checkout"),
-            //   ),
-            // ),
           ],
         ),
       ),
